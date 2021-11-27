@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+.product-name-style {
+    white-space: nowrap;
+    max-width: 75ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// .search-box{
+// }
+.qty {
+    width: 35px;
+    text-align: center;
+}
+
+.inc_dsc {
+    width: 25px;
+    ;
+}
+
+.header-icons {
+    width: fit-content;
+    float: right;
+}
+
+.icon-size {
+    font-size: 25px;
+}
+
+.cart-icon-style {
+    position: absolute;
+    margin-top: -44px;
+    /* margin-right: 20px; */
+    margin-left: 25px;
+    font-size: 13px;
+    background: black;
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+    width: fit-content;
+    min-width: 20px;
+    padding: 1px;
+    height: fit-content;
+    float: ce;
+    text-align: center;
+}
+
+.cart-p {
+    padding: 0px !important;
+    margin: 0px;
+    font-size: 14px;
+}
+
+.cart-p-desc-style {
+    white-space: nowrap;
+    max-width: 100ch;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.grand-total {
+    width: fit-content;
+    float: right;
+    font-weight: bold;
+    font-size: 16px;
+}

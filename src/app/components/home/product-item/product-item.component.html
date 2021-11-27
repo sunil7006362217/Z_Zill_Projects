@@ -1,0 +1,8 @@
+<div class="card">
+    <img class="card-img-top" [src]="Item.image" alt="Card image cap" width="300px" height="300px" style="object-fit: contain;">
+    <div class="card-body">
+        <h5 class="card-title" class="product-name-style">{{Item.title}}</h5>
+        <p class="card-text"></p>
+        <a routerLink="/product-detail" [queryParams]="{p_id:Item.id}" class="btn btn-primary">Product Detail</a>
+    </div>
+</div>

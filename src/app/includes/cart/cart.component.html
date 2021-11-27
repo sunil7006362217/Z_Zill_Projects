@@ -1,0 +1,48 @@
+<!-- <div class="row">
+    <div class="col-12">
+        <table>
+        
+        </table>
+    </div>
+
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <a routerLink="/home" style="
+                float: right;
+        ">Go to homepage</a>
+        </div>
+        <div class="col-md-12 " *ngIf="cartItemCount == 0">
+            <p class="m-md-auto" style="width:fit-content">No items in cart.</p>
+
+        </div>
+        <div class="col-12" *ngIf="cartItemCount > 0">
+            <table class="table">
+                <tr *ngFor="let item of cartItems;let i = index">
+                    <td> <img [src]="item?.image || ''" alt="" srcset="" width="100px" height="100px"></td>
+                    <td>
+                        <p class="cart-p"><strong>{{item.title}}</strong></p>
+                        <p class="cart-p cart-p-desc-style">{{item.description}}</p>
+                        <p class="cart-p">Qty : {{item.qty}}</p>
+                        <p class="cart-p">price : {{item.price | currency:"INR"}}</p>
+
+                    </td>
+                    <td> <i class="fa fa-remove" (click)="removeItem(i)"></i></td>
+                    <td>Amt : {{item.total_amt | currency:"INR"}} </td>
+                    <td> </td>
+                </tr>
+            </table>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="grand-total">Total : {{GrandTotalAmt | currency:"INR"}}</p>
+                </div>
+                <div class="col-md-12">
+                    <button class="btn btn-sm btn-danger" style="float: right;" (click)="emptyCart()">Empty Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

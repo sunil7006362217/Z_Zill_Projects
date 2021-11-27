@@ -1,0 +1,29 @@
+<!-- {{P_Detail | json}} -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img [src]="P_Detail?.image || '' " alt="ProductImage" width="50%">
+
+        </div>
+        <div class="col-md-6">
+            <p><strong>{{P_Detail?.title}}</strong></p>
+            <p>Price : {{P_Detail?.price | currency:"INR"}}</p>
+            <p>Description : {{P_Detail?.description}}</p>
+            <p>Qty :
+
+                <button class="inc_dsc" (click)="descQty(qty)">-</button>
+                <input type="text" name="qty" id="qty" class="qty" min="1" [value]="Qty" max="P_Detail.rating.count" #qty>
+                <button class="inc_dsc" (click)="incQty(qty)">+</button>
+            </p>
+
+            <p>Rating : {{P_Detail?.rating.rate}}
+            </p>
+
+            <div class=" col-md-6 ">
+                <button class="btn btn-primary " (click)="addToCartDetailPage(P_Detail,qty)">Add To Cart</button>
+
+                <a routerLink="/home"><i class="fa fa-home mx-2 "></i>Go to homepage</a>
+            </div>
+        </div>
+
+    </div>

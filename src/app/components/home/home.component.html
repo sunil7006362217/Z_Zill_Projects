@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-md-6">
+            <input type="text" name="search" #val id="search" class="form-control" placeholder="Search Products" (keyup)="search(val)">
+        </div>
+
+        <div class="col col-md-6 m-auto" style="text-align: right;">
+            <span (click)="getList()" class="badge bg-secondary" style="padding: 2px;cursor: pointer;margin:2px">All</span>
+            <ng-container *ngFor="let item of Category">
+                <span (click)="category(item)" class="badge bg-secondary" style="padding: 2px;cursor: pointer;margin:2px">{{item}}</span>
+
+            </ng-container>
+            <!-- <i class="fa fa-diamond " (click)="category( 'jewelery') " aria-hidden="true " style="padding: 4px;cursor: pointer; "> Jewellery</i>
+            <i class="fa fa-male " (click)="category(men 's clothing)" aria-hidden="true" style="padding: 4px;cursor: pointer;"> Men's Clothing</i>
+                <i class="fa fa-female" (click)="category(women's clothing)" aria-hidden="true" style="padding: 4px;cursor: pointer;"> Female's Clothing</i> -->
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-4 mt-2" *ngFor="let item of ProductList | filter:searchKey:'title'">
+            <app-product-item [item]="item"></app-product-item>
+        </div>
+
+
+        <!-- <div class="card col-md-3" *ngFor="let item of ProductList">
+            <img class="card-img-top" [src]="ProductList.image" alt="Card image cap" width="300px" height="300px">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div> -->
+
+
+
+    </div>
+
+</div>
