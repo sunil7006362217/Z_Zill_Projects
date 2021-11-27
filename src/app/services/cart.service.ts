@@ -10,7 +10,7 @@ export class CartService {
 
   public cartItemList : any =[]
   public productList = new BehaviorSubject<any>([]);
-  public search = new BehaviorSubject<any>([]);
+
   public grand_total : number
   public isexist : Boolean = false
   public index : number;
@@ -18,9 +18,9 @@ export class CartService {
   // itemTotal : Number;
   // public search = new BehaviorSubject<string>("");
   constructor() { }
-  getProducts(){
-    return this.productList.asObservable();
-  }
+  //   getProducts(){
+  //   return this.productList.asObservable();
+  // }
 
   addToCart(item : any):void{
     let i = 0;
@@ -113,7 +113,5 @@ export class CartService {
 
   }
 
-  searchStart(list){
-    this.search.next(list)
-  }
+  
 }
