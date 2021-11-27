@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
 
     this._api.getProductCat().subscribe(res => {
       this.Category = res;
+      this.getList()
       console.log(this.Category)
     })
   }
